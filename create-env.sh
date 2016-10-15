@@ -7,15 +7,15 @@ else
 
 echo "Starting environment creation..."
 
-echo -e "Please enter the AMI ID: $1" 
+echo -e "The AMI ID is: $1" 
 
-echo -e "Please enter the key-name: $2" 
+echo -e "The key-name is: $2" 
 
-echo -e "Please enter the security group number: $3" 
+echo -e "The security group number is: $3" 
 
-echo -e "Please enter the launch configuration name: $4"  
+echo -e "The launch configuration name is: $4"  
 
-echo -e "Please enter the count desired:" 
+echo -e "The count desired is currently a dormant value:" 
 
 echo -e Creating launch configuration...'\n'
 
