@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#This script requires 5 parameters that must be placed in order as decribed in the first echo in the if statement. An example of these parameters would be:
+# ami-06b94666 week3 sg-ae6ba2d7 launch-config-1 1
+
 if [ $# != 5 ]
 then
 	echo -e This requires 5 parameters to run: AMI ID, key-name, security-group, launch-configuration, and count. Please enter these in that order. '\n'
