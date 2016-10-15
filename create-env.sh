@@ -14,9 +14,11 @@ echo -e Creating auto-scaling group...'\n'
 
 aws autoscaling create-auto-scaling-group --auto-scaling-group-name scaling-group-1 --launch-configuration launch-config-1 --availability-zone us-west-2b --load-balancer-names balancer-1 --max-size 5 --min-size 2 --desired-capacity 3
 
-echo -e Waiting on instance to be created...'\n'
+echo -e Waiting on instances to be created and running...'\n'
 
-echo -e Done!'\n'
+aws ec2 wait instance-running --filters --query 'Reservations[].Instances[].InstanceId'
+
+echo -e Complete!'\n'
 
 echo -e Here are your instance IDs: '\n'
 
